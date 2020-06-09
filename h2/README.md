@@ -1,5 +1,8 @@
 ## Spring Boot H2 Rest
 
+#### H2 console
+* http://localhost:8080/h2/
+
 #### List all lessons for a teacher (GET)
 * 200 : http://localhost:8080/registration/teacher/1/
 * 404 : http://localhost:8080/registration/teacher/5/
