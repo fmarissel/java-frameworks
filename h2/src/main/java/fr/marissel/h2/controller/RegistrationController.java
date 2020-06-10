@@ -7,6 +7,7 @@ import fr.marissel.h2.repository.LessonRepository;
 import fr.marissel.h2.repository.RegistrationRepository;
 import fr.marissel.h2.repository.StudentRepository;
 import fr.marissel.h2.repository.TeacherRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,22 +20,13 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/registration")
+@AllArgsConstructor
 public class RegistrationController {
 
     private final TeacherRepository teacherRepository;
     private final StudentRepository studentRepository;
     private final LessonRepository lessonRepository;
     private final RegistrationRepository registrationRepository;
-
-    public RegistrationController(final TeacherRepository teacherRepository,
-                                  final StudentRepository studentRepository,
-                                  final LessonRepository lessonRepository,
-                                  final RegistrationRepository registrationRepository) {
-        this.teacherRepository = teacherRepository;
-        this.studentRepository = studentRepository;
-        this.lessonRepository = lessonRepository;
-        this.registrationRepository = registrationRepository;
-    }
 
     @GetMapping("/teacher/{teacherId}")
     public ResponseEntity<List<Lesson>> getLessonByTeacher(@PathVariable final Integer teacherId) {
