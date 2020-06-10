@@ -32,8 +32,8 @@ INSERT INTO lesson
 VALUES (5, 'English for newbie', 'ENGLISH', 4, parsedatetime('30-09-2019 8:00:00', 'dd-MM-yyyy hh:mm:ss'), '3:00');
 
 INSERT INTO registration
-VALUES (1, 1, 7, parsedatetime('15-08-2019 12:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
+VALUES (1, 1, 7, parsedatetime('15-08-2019 10:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
 INSERT INTO registration
-VALUES (2, 4, 6, parsedatetime('20-08-2019 12:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
+VALUES (2, 4, 6, parsedatetime('20-08-2019 15:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
 INSERT INTO registration
-VALUES (3, 5, 6, parsedatetime('20-08-2019 12:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
+VALUES (3, 5, 6, parsedatetime('20-08-2019 18:00:00', 'dd-MM-yyyy hh:mm:ss'), null);
