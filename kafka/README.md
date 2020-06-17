@@ -29,7 +29,7 @@ docker-compose stop
 
 # create topic fmatest
 $KAFKA_HOME/bin/kafka-topics.sh --create --topic fmatest \
---partitions 4 --replication-factor 1 \
+--partitions 1 --replication-factor 1 \
 --bootstrap-server `broker-list.sh`
 
 # describe topic fmatest
