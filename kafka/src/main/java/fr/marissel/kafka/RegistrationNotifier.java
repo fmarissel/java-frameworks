@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class KafkaConsumer {
-    
-    @KafkaListener(topics = "fmatest", groupId = "group.id")
+public class RegistrationNotifier {
+
+    @KafkaListener(topics = "registration", groupId = "group.id")
     public void consume(String message) {
         log.info(String.format("$$ -> Consumed Message -> %s", message));
     }
