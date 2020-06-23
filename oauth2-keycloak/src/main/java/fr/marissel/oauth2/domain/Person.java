@@ -27,4 +27,7 @@ public abstract class Person {
 
     @Column
     private String lastName;
+
+    @Column
+    private String email;
 }

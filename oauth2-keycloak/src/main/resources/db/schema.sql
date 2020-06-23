@@ -7,7 +7,8 @@ CREATE TABLE person
     id          INTEGER IDENTITY PRIMARY KEY,
     person_type VARCHAR(10) NOT NULL,
     first_name  VARCHAR(30) NOT NULL,
-    last_name   VARCHAR(30) NOT NULL
+    last_name   VARCHAR(30) NOT NULL,
+    email       VARCHAR (50) NOT NULL UNIQUE
 );
 
 CREATE TABLE lesson

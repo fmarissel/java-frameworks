@@ -1,18 +1,18 @@
 INSERT INTO person
-VALUES (1, 'TEACHER', 'Jean-Michel', 'History');
+VALUES (1, 'TEACHER', 'Jean-Michel', 'History', 'jean-michel.history@yopmail.com');
 INSERT INTO person
-VALUES (2, 'TEACHER', 'Jean-Michel', 'Philosophy');
+VALUES (2, 'TEACHER', 'Jean-Michel', 'Philosophy', 'jean-michel.philosphy@yopmail.com');
 INSERT INTO person
-VALUES (3, 'TEACHER', 'Jean-Michel', 'Mathematics');
+VALUES (3, 'TEACHER', 'Jean-Michel', 'Mathematics', 'jean-michel.mathematics@yopmail.com');
 INSERT INTO person
-VALUES (4, 'TEACHER', 'Jean-Michel', 'English');
+VALUES (4, 'TEACHER', 'Jean-Michel', 'English', 'jean-michel.english@yopmail.com');
 
 INSERT INTO person
-VALUES (5, 'STUDENT', 'Joe', 'Chip');
+VALUES (5, 'STUDENT', 'Joe', 'Chip', 'joe.chip@yopmail.com');
 INSERT INTO person
-VALUES (6, 'STUDENT', 'Arthur', 'Dent');
+VALUES (6, 'STUDENT', 'Arthur', 'Dent', 'arthur.dent@yopmail.com');
 INSERT INTO person
-VALUES (7, 'STUDENT', 'Hari', 'Seldon');
+VALUES (7, 'STUDENT', 'Hari', 'Seldon', 'hari.seldon@yopmail.com');
 
 INSERT INTO lesson
 VALUES (1, 'Introduction to history', 'HISTORY', 1, parsedatetime('16-09-2019 10:00:00', 'dd-MM-yyyy hh:mm:ss'),
