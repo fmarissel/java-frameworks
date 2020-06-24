@@ -70,3 +70,27 @@ mutation {
   }
 }
 ```
+###### Error Handling
+See package exception
+```graphql
+{
+  lessonsByTeacher(teacherId: 13) {
+    id
+    name
+  }
+}
+```
+```graphql
+mutation {
+  register(studentId: 6, lessonId: 5) {
+    id
+  }
+}
+```
+```graphql
+mutation {
+  grade(studentId: 16, lessonId: 15, grade: B) {
+    id
+  }
+}
+```
