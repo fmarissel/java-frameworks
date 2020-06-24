@@ -1,0 +1,65 @@
+scalar DateTime
+scalar Duration
+
+enum Grade {
+    A, B, C, D, E, F
+}
+
+enum Subject {
+    MATHEMATICS, HISTORY, ENGLISH, PHILOSOPHY
+}
+
+type Registration {
+    id: ID!,
+    lesson: Lesson!,
+    student: Student!,
+    registeredAt: DateTime!,
+    grade: Grade
+}
+
+type Lesson {
+    id: ID!,
+    name: String!,
+    subject: Subject!,
+    teacher: Teacher!,
+    startAt: DateTime!,
+    duration: Duration!
+}
+
+interface Person {
+    id: ID!,
+    personType: PersonType!,
+    firstName: String!,
+    lastName: String!,
+    email: String!
+}
+
+enum PersonType {
+    STUDENT, TEACHER
+}
+
+type Student implements Person {
+    id: ID!,
+    personType: PersonType!,
+    firstName: String!,
+    lastName: String!,
+    email: String!
+}
+
+type Teacher implements Person {
+    id: ID!,
+    personType: PersonType!,
+    firstName: String!,
+    lastName: String!,
+    email: String!
+}
+
+type Query {
+    lessonsByTeacher(teacherId: Int!): [Lesson!]!,
+    registrationsByStudent(studentId: Int!): [Registration!]!
+}
+
+type Mutation {
+    register(studentId: Int!, lessonId: Int!): Registration,
+    grade(studentId: Int!, lessonId: Int!, grade: Grade): Registration
+}

@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Duration;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 @Data
@@ -31,7 +31,7 @@ public class Lesson {
     private Teacher teacher;
 
     @Column
-    private LocalDateTime startAt;
+    private OffsetDateTime startAt;
 
     @Column(columnDefinition = "INTERVAL HOUR TO MINUTE")
     private Duration duration;

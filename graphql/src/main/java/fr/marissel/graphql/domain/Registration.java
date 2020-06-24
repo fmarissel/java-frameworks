@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @NoArgsConstructor
@@ -25,7 +25,7 @@ public class Registration {
     private Student student;
 
     @Column
-    private LocalDateTime registeredAt;
+    private OffsetDateTime registeredAt;
 
     @Column(length = 1)
     @Enumerated(EnumType.STRING)
