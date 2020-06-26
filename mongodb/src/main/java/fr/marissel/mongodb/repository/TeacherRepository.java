@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface TeacherRepository extends MongoRepository<Teacher, BigInteger> {
 
-    Optional<Teacher> findByEmail(String email);
+    Optional<Teacher> findByEmail(final String email);
 }

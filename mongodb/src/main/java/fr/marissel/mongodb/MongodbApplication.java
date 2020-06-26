@@ -1,9 +1,6 @@
 package fr.marissel.mongodb;
 
-import fr.marissel.mongodb.domain.Lesson;
-import fr.marissel.mongodb.domain.Student;
-import fr.marissel.mongodb.domain.Subject;
-import fr.marissel.mongodb.domain.Teacher;
+import fr.marissel.mongodb.domain.*;
 import fr.marissel.mongodb.repository.LessonRepository;
 import fr.marissel.mongodb.repository.RegistrationRepository;
 import fr.marissel.mongodb.repository.StudentRepository;
@@ -93,6 +90,7 @@ public class MongodbApplication {
 
         // lessons
         var lessonH1 = Lesson.builder()
+                .code("H1")
                 .name("Introduction to history")
                 .subject(Subject.HISTORY)
                 .teacher(teacherH)
@@ -102,6 +100,7 @@ public class MongodbApplication {
         lessonH1 = lessonRepository.save(lessonH1);
 
         var lessonM1 = Lesson.builder()
+                .code("M1")
                 .name("Mathematics level 1")
                 .subject(Subject.MATHEMATICS)
                 .teacher(teacherM)
@@ -111,6 +110,7 @@ public class MongodbApplication {
         lessonM1 = lessonRepository.save(lessonM1);
 
         var lessonM2 = Lesson.builder()
+                .code("M2")
                 .name("Mathematics level 2")
                 .subject(Subject.MATHEMATICS)
                 .teacher(teacherM)
@@ -120,6 +120,7 @@ public class MongodbApplication {
         lessonM2 = lessonRepository.save(lessonM2);
 
         var lessonM3 = Lesson.builder()
+                .code("M3")
                 .name("Mathematics level 3")
                 .subject(Subject.MATHEMATICS)
                 .teacher(null)
@@ -129,6 +130,7 @@ public class MongodbApplication {
         lessonM3 = lessonRepository.save(lessonM3);
 
         var lessonE1 = Lesson.builder()
+                .code("E1")
                 .name("English for newbie")
                 .subject(Subject.ENGLISH)
                 .teacher(teacherE)
@@ -136,5 +138,26 @@ public class MongodbApplication {
                 .duration(Duration.ofMinutes(180))
                 .build();
         lessonE1 = lessonRepository.save(lessonE1);
+
+        var registrationH1 = Registration.builder()
+                .lesson(lessonH1)
+                .student(hs)
+                .registeredAt(LocalDateTime.of(2019, 8, 15, 12, 0))
+                .build();
+        registrationRepository.save(registrationH1);
+
+        var registrationM3 = Registration.builder()
+                .lesson(lessonM3)
+                .student(jc)
+                .registeredAt(LocalDateTime.of(2019, 8, 20, 14, 0))
+                .build();
+        registrationRepository.save(registrationM3);
+
+        var registrationE1 = Registration.builder()
+                .lesson(lessonE1)
+                .student(ad)
+                .registeredAt(LocalDateTime.of(2019, 8, 20, 16, 0))
+                .build();
+        registrationRepository.save(registrationE1);
     }
 }
