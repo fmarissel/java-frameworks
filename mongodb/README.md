@@ -24,6 +24,11 @@ mongo
 # List databases
 > show dbs
 
+# Show collections
+> show collections
+
 # Show data
 > db.readme.find()
 ```
+
+http://localhost:8080/registration/teacher?email=jean-michel.history@yopmail.com

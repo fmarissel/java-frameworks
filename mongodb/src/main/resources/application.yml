@@ -4,3 +4,7 @@ spring:
       host: localhost
       port: 27017
       database: test_mongo
+
+logging:
+  level:
+    org.springframework.data: debug
